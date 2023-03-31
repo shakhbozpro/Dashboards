@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* ! Normalize */
 html {
   line-height: 1.15; /* 1 */
@@ -18,7 +25,8 @@ h1 {
 }
 
 hr {
-  box-sizing: content-box; /* 1 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
@@ -35,7 +43,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 b,
@@ -122,7 +131,8 @@ fieldset {
 }
 
 legend {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
   display: table; /* 1 */
   max-width: 100%; /* 1 */
@@ -140,7 +150,8 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
 
@@ -185,13 +196,15 @@ html {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  background-color: #f5f6fa;
 }
 
 img {
@@ -214,4 +227,55 @@ ul, ol {
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+}
+
+/* ! Sidebar styles */
+.sidebar {
+  height: 100%;
+}
+.sidebar-list {
+  border-top: 1px solid #203247;
+}
+.sidebar-heading {
+  color: #b7c2d0;
+}
+.sidebar-link {
+  color: #8091a7;
+}
+.sidebar-item-badge {
+  color: #9cabff;
+  background-color: #2b3748;
+  border-radius: 1px;
+}
+.sidebar-menus-list {
+  margin-top: 14px;
+  color: #e0eeff;
+  background-color: #2B3748;
+  border-radius: 2.5px;
+}
+.projects-list.show {
+  display: block;
+}
+.user-manage-list.show {
+  display: block;
+}
+
+/* ! Header styles */
+.header {
+  border-bottom: 1px solid #dbdfea;
+}
+.header-text {
+  color: #526484;
+}
+.header-text a {
+  color: #8091a7;
+}
+.header-admin-image {
+  background-color: #6576ff;
+}
+.header-admin-text {
+  color: #6576ff;
+}
+.header-admin-text ~ a {
+  color: #526484;
 }

@@ -6,19 +6,216 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sales Dashboard</title>
+  <!-- Tailwind file -->
   <link rel="stylesheet" href="./dist/output.css">
+  <!-- CSS files -->
+  <!-- <link rel="stylesheet" href="./assets/styles/main.css"> -->
+  <link rel="stylesheet" href="./assets/styles/main.min.css">
 </head>
 
-<body>
+<body class="flex items-start">
   <!-- ? Sidebar start -->
-  <div class="sidebar"></div>
+  <div class="sidebar max-w-[290px] w-full pb-[29px] bg-slate-900">
+    <div class="flex items-center gap-x-6 py-[14px] px-6">
+      <button>
+        <img src="./assets/images/burger-menu.svg" alt="Menu button" width="22" height="16">
+      </button>
+      <a href="index.html">
+        <img src="./assets/images/site-logo.png" alt="Site logo" width="118" height="36">
+      </a>
+    </div>
+
+    <ul class="sidebar-list font-bold py-4 px-6">
+      <li class="mb-10">
+        <h3 class="sidebar-heading mb-2 text-[11px] leading-[120%] tracking-[2.2px] uppercase">Use-case preview</h3>
+        <ul>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/user-manage.svg" alt="User manage" width="22" height="21">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">User manage</a>
+            <span class="sidebar-item-badge ml-auto px-2 text-[11px] leading-5 tracking-[0.16px] uppercase">Hot</span>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/hotel-managment.svg" alt="Hotel management" width="22" height="20">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Hotel
+              management</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="mb-10">
+        <h3 class="sidebar-heading mb-2 text-[11px] leading-[120%] tracking-[2.2px] uppercase">Dashboards</h3>
+        <ul>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/default-dashboard.svg" alt="Default dashboard" width="18" height="20">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Default
+              dashboard</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/crypto-dashboard.svg" alt="Crypto dashboard" width="16" height="20">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Crypto
+              dashboard</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/analytics-dashboard.svg" alt="Analytics dashboard" width="22" height="22">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Analytics
+              dashboard</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/invest-dashboard.svg" alt="Invest dashboard" width="22" height="20">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Invest
+              dashboard</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="mb-10">
+        <h3 class="sidebar-heading mb-2 text-[11px] leading-[120%] tracking-[2.2px] uppercase">Pre-built pages</h3>
+        <ul>
+          <li class="py-3">
+            <div class="flex items-center gap-x-3">
+              <img src="./assets/images/projects.svg" alt="Projects" width="22" height="20">
+              <button
+                class="sidebar-link projects-menu-btn flex items-center justify-between w-full text-[15px] leading-5 tracking-[0.16px] capitalize">Projects
+                <img class="projects-arrow transition duration-50 ease-in-out"
+                  src="./assets/images/navbar-arrow-right.svg" alt="Projects' right arrow" width="6" height="11">
+              </button>
+            </div>
+            <ul class="sidebar-menus-list projects-list bg-neutral-600 static hidden">
+              <li>
+                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">Project 01</a>
+              </li>
+              <li>
+                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">Project 02</a>
+              </li>
+              <li>
+                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">Project 03</a>
+              </li>
+            </ul>
+          </li>
+          <li class="py-3">
+            <div class="flex items-center gap-x-3">
+              <img src="./assets/images/projects.svg" alt="User manage" width="22" height="22">
+              <button
+                class="sidebar-link user-manage-menu-btn flex items-center justify-between w-full text-[15px] leading-5 tracking-[0.16px] capitalize">User
+                manage
+                <img class="user-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                  alt="User's right arrow" width="6" height="11">
+              </button>
+            </div>
+            <ul class="sidebar-menus-list user-manage-list bg-neutral-600 static hidden">
+              <li>
+                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">User 01</a>
+              </li>
+              <li>
+                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">User 02</a>
+              </li>
+              <li>
+                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">User 03</a>
+              </li>
+            </ul>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/AML-KYCs.svg" alt="AML / KYCs" width="22" height="22">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">AML / KYCs</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/transactions.svg" alt="Transactions" width="22" height="20">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Transactions</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/applications.svg" alt="Applications" width="22" height="20">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Applications</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/invoice.svg" alt="Invoice" width="22" height="22">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Invoice</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/products.svg" alt="Products" width="18" height="19">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Products</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/pricing-table.svg" alt="Pricing table" width="22" height="20">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Pricing table</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/image-gallery.svg" alt="Image gallery" width="22" height="20">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Image gallery</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h3 class="sidebar-heading mb-2 text-[11px] leading-[120%] tracking-[2.2px] uppercase">Components</h3>
+        <ul>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/Ui-elements.svg" alt="Ui elements" width="22" height="20">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Ui elements</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/crafted-icons.svg" alt="Crafted icons" width="18" height="19">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Crafted icons</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/icon-libraries.svg" alt="Icon libraries" width="18" height="19">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Icon Libraries</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/tables.svg" alt="Tables" width="18" height="17">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Tables</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/forms.svg" alt="Forms" width="18" height="19">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Forms</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/charts.svg" alt="Charts" width="22" height="20">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Charts</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/miscellaneous.svg" alt="Miscellaneous" width="22" height="20">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Miscellaneous</a>
+          </li>
+          <li class="flex items-center gap-x-3 py-3">
+            <img src="./assets/images/email-template.svg" alt="Email template" width="18" height="20">
+            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Email template</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
   <!-- ? Sidebar end -->
 
 
   <!-- ! Main content start -->
 
   <!-- ? Header start -->
-  <header></header>
+  <header class="header w-full py-4 px-[30px] bg-white">
+    <div class="handle-container">
+      <div class="flex justify-between items-center">
+        <p class="header-text flex items-center font-medium text-[13px] leading-[165%]">
+          <img class="mr-[6px]" src="./assets/images/h-question-start.svg" alt="Question letter" width="16" height="16">
+          Do you know the latest update of 2019?
+          <a class="flex items-center" href="#">A overview of our is now available on You.....
+            <img class="ml-[6px]" src="./assets/images/h-question-end.svg" alt="In detail" width="10" height="10">
+          </a>
+        </p>
+
+        <div class="flex items-center gap-x-5">
+          <img class="rounded-full" src="./assets/images/usa.png" alt="Usa flag" width="22" height="22">
+          <div class="flex items-center">
+            <img class="header-admin-image mr-4 p-[9px] rounded-full" src="./assets/images/administrator.svg"
+              alt="Administrator" width="14" height="14">
+            <div class="flex flex-col">
+              <span class="header-admin-text mb-[3px] font-medium text-[11px] leading-[100%]">Administrator</span>
+              <a class="font-bold text-xs leading-4" href="#">Abu bin ishityak</a>
+            </div>
+          </div>
+          <img src="./assets/images/notification.svg" alt="Notification" width="24" height="26">
+        </div>
+      </div>
+    </div>
+  </header>
   <!-- ? Header end -->
 
   <!-- ? Main start -->
