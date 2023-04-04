@@ -259,6 +259,9 @@ h1, h2, h3, h4, h5, h6, p {
 .user-manage-list.show {
   display: block;
 }
+.aml-list.show {
+  display: block;
+}
 
 /* ! Header styles */
 .header {
@@ -270,12 +273,67 @@ h1, h2, h3, h4, h5, h6, p {
 .header-text a {
   color: #8091a7;
 }
-.header-admin-image {
-  background-color: #6576ff;
-}
 .header-admin-text {
   color: #6576ff;
 }
 .header-admin-text ~ a {
   color: #526484;
+}
+
+/* ! Main styles */
+.calendar-btn::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 17px;
+  margin-right: 12px;
+  background-image: url("../images/calendar.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.calendar-btn::after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 10px;
+  margin-left: 12px;
+  background-image: url("../images/calendar-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.repost::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  background-image: url("../images/reports.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.loss-amount::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-image: url("../images/loss-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.profit-amount::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-image: url("../images/profit-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.chart-box {
+  background-image: url("../images/question-mark.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 24px) calc(24px)
+}
+.revenueChart .modebar {
+  display: none;
 }
