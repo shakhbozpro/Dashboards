@@ -119,3 +119,44 @@ for (let i = 0; i < data3.length; i++) {
     barHeight
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+// Get the canvas element and create a new chart object
+var ctxx = document.getElementById("myChart").getContext("2d");
+var myChart = new Chart(ctxx, {
+  type: "line",
+  data: {
+    labels: ["01", "02", "03", "04", "05", "6", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"],
+    datasets: [
+      {
+        label: "Vertical Line Chart",
+        data: [5, 7, 10, 5, 15, 22, 7, 5, 15, 7, 7, 5, 8, 25, 7, 5, 15, 19, 7, 7, 20, 17, 21, 13, 25],
+        backgroundColor: "#E0E4FF",
+        borderColor: "#6576FF",
+        borderWidth: 2,
+        pointRadius: 0, // set point radius to 0 to hide points on the chart
+      },
+    ],
+  },
+  options: {
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+          },
+        },
+      ],
+    },
+  },
+});
+

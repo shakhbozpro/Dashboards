@@ -270,14 +270,14 @@
       <section class="pt-7">
         <div class="handle-container">
           <div class="flex">
-            <div class="max-w-[769px]">
+            <div class="max-w-[769px] mr-[28px]">
               <div class="chart-box mb-6 pt-6 px-6 pb-4 bg-white border-[1px] border-[#DBDFEA] rounded-[4px]">
                 <h3 class="mb-1 font-bold leading-[110%] tracking-[-0.168px] text-[#364A63] capitalize">Sales revenue
                 </h3>
                 <p class="leading-[165%] text-xs text-[#8091A7]">
                   In last 30 days revenue from subscription.
                 </p>
-                <div class="flex justify-between items-center gap-x-[60px]">
+                <div class="flex justify-between items-center gap-x-[30px]">
                   <div class="flex items-center gap-x-6">
                     <p class="leading-[165%] text-[12px] text-[#8091A7]">
                       <span class="flex items-center leading-[110%] text-[28px] text-[#364A63]">
@@ -322,7 +322,7 @@
                 <div class="chart-box p-6 pb-0 bg-white border-[1px] border-[#DBDFEA] rounded-[4px]">
                   <h3 class="font-bold leading-[110%] tracking-[-0.168px] capitalize text-[#364A63]">Avg subscriptions
                   </h3>
-                  <div class="flex items-center gap-x-6">
+                  <div class="flex items-center gap-x-">
                     <p class="mr-[40px] leading-[165%] text-[12px] text-[#364A63]">
                       <span class="flex items-center leading-[110%] text-[28px] text-[#364A63]">346.2</span>
                       <span class="flex items-center text-[#8091A7]">
@@ -334,6 +334,23 @@
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div class="chart-box w-full pt-6 px-6 bg-white border-[1px] border-[#DBDFEA] rounded-[4px]">
+              <h3 class="mb-1 font-bold leading-[110%] tracking-[-0.168px] text-[#364A63] capitalize">Sales overview
+              </h3>
+              <p class="mb-2 text-xs leading-[165%] text-[#8091A7]">
+                In 30 days sales of product subscription.
+                <a class="capitalize text-[#6576FF]" href="#">See details</a>
+              </p>
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-[28px] leading-[110%] text-[#364A63]">$82,944.60</span>
+                <span class="text-[18px] leading-[165%] text-[#8091A7]">
+                  1,937
+                  <span class="text-[13px]">Subscribers</span>
+                </span>
+              </div>
+              <canvas id="myChart" class="max-w-[680px] max-h-[150px] mr-0"></canvas>
             </div>
           </div>
         </div>
