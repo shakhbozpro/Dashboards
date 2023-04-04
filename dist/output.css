@@ -560,24 +560,12 @@ video {
   margin-right: 1rem;
 }
 
-.mr-6 {
-  margin-right: 1.5rem;
+.mr-\[40px\] {
+  margin-right: 40px;
 }
 
 .mr-\[6px\] {
   margin-right: 6px;
-}
-
-.mr-\[47px\] {
-  margin-right: 47px;
-}
-
-.mr-\[45px\] {
-  margin-right: 45px;
-}
-
-.mr-\[40px\] {
-  margin-right: 40px;
 }
 
 .block {
@@ -658,11 +646,6 @@ video {
 .gap-x-6 {
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
-}
-
-.gap-x-8 {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
 }
 
 .gap-x-\[60px\] {
@@ -830,6 +813,10 @@ video {
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .uppercase {

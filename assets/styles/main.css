@@ -26,7 +26,7 @@ h1 {
 
 hr {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box; /* 1 */
+  box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
@@ -44,7 +44,7 @@ abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 b,
@@ -132,7 +132,7 @@ fieldset {
 
 legend {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 1 */
+  box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
   display: table; /* 1 */
   max-width: 100%; /* 1 */
@@ -151,7 +151,7 @@ textarea {
 [type="checkbox"],
 [type="radio"] {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 1 */
+  box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
 
@@ -190,6 +190,49 @@ template {
   display: none;
 }
 
+/* ! Fonts */
+/* roboto-400 */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-weight: 400;
+  src: url('../fonts/roboto-v30-cyrillic_latin-regular.woff2') format('woff2'),
+  url('../fonts/roboto-v30-cyrillic_latin-regular.woff') format('woff');
+}
+/* roboto-500 */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-weight: 500;
+  src: url('../fonts/roboto-v30-cyrillic_latin-500.woff2') format('woff2'),
+  url('../fonts/roboto-v30-cyrillic_latin-500.woff') format('woff');
+}
+/* roboto-700 */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-weight: 700;
+  src: url('../fonts/roboto-v30-cyrillic_latin-700.woff2') format('woff2'),
+  url('../fonts/roboto-v30-cyrillic_latin-700.woff') format('woff');
+}
+
+/* nunito-400 */
+@font-face {
+  font-display: swap;
+  font-family: 'Nunito';
+  font-weight: 400;
+  src: url('../fonts/nunito-v25-cyrillic_latin-regular.woff2') format('woff2'),
+  url('../fonts/nunito-v25-cyrillic_latin-regular.woff') format('woff');
+}
+/* nunito-700 */
+@font-face {
+  font-display: swap;
+  font-family: 'Nunito';
+  font-weight: 700;
+  src: url('../fonts/nunito-v25-cyrillic_latin-700.woff2') format('woff2'),
+  url('../fonts/nunito-v25-cyrillic_latin-700.woff') format('woff');
+}
+
 /* ! General styles */
 html {
   scroll-behavior: smooth;
@@ -197,7 +240,7 @@ html {
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -225,8 +268,13 @@ ul, ol {
   list-style-type: none;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  font-family: 'Nunito', 'Arial', sans-serif;
+}
+p {
+  margin: 0;
+  font-family: 'Roboto', 'Arial', sans-serif;
 }
 
 /* ! Sidebar styles */
@@ -238,9 +286,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .sidebar-heading {
   color: #b7c2d0;
+  font-family: 'Roboto', 'Arial', sans-serif;
 }
 .sidebar-link {
   color: #8091a7;
+  font-family: 'Nunito', 'Arial', sans-serif;
 }
 .sidebar-item-badge {
   color: #9cabff;
@@ -269,18 +319,24 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .header-text {
   color: #526484;
+  font-family: 'Roboto', 'Arial', sans-serif;
 }
 .header-text a {
   color: #8091a7;
 }
 .header-admin-text {
   color: #6576ff;
+  font-family: 'Roboto', 'Arial', sans-serif;
 }
 .header-admin-text ~ a {
   color: #526484;
 }
 
 /* ! Main styles */
+.calendar-btn,
+.repost {
+  font-family: 'Nunito', 'Arial', sans-serif;
+}
 .calendar-btn::before {
   content: "";
   display: inline-block;
