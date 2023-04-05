@@ -7,6 +7,7 @@ const userMenuList = document.querySelector(".user-manage-list");
 const amlMenuBtn = document.querySelector(".aml-menu-btn");
 const amlArrow = document.querySelector(".aml-arrow");
 const amlMenuList = document.querySelector(".aml-list");
+const transactionStatus = document.querySelectorAll(".transaction-status");
 
 projectsMenuBtn.addEventListener('click', () => {
   projectsArrow.classList.toggle("rotate-90");
@@ -120,22 +121,12 @@ for (let i = 0; i < data3.length; i++) {
   );
 }
 
-
-
-
-
-
-
-
-
-
-
-// Get the canvas element and create a new chart object
-var ctxx = document.getElementById("myChart").getContext("2d");
-var myChart = new Chart(ctxx, {
+// ! Data for the line chart
+let ctxx = document.getElementById("myChart").getContext("2d");
+let myChart = new Chart(ctxx, {
   type: "line",
   data: {
-    labels: ["01", "02", "03", "04", "05", "6", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"],
+    labels: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"],
     datasets: [
       {
         label: "Vertical Line Chart",
@@ -148,6 +139,9 @@ var myChart = new Chart(ctxx, {
     ],
   },
   options: {
+    legend: {
+      display: false
+    },
     scales: {
       yAxes: [
         {
@@ -157,6 +151,20 @@ var myChart = new Chart(ctxx, {
         },
       ],
     },
+    tooltips: {
+      enabled: true,
+      mode: 'label',
+      intersect: false,
+    },
   },
 });
 
+// ! Transaction status styling
+transactionStatus.forEach(item => {
+  if (item.textContent === "Paid") {
+    item.classList.add("text-[#1EE0AC]", "transaction-paid");
+  }
+  if (item.textContent === "Canceled") {
+    item.classList.add("text-[#E85347]", "transaction-canceled");
+  }
+})

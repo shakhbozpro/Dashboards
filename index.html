@@ -9,8 +9,8 @@
   <!-- Tailwind file -->
   <link rel="stylesheet" href="./dist/output.css">
   <!-- CSS files -->
-  <link rel="stylesheet" href="./assets/styles/main.css">
-  <!-- <link rel="stylesheet" href="./assets/styles/main.min.css"> -->
+  <!-- <link rel="stylesheet" href="./assets/styles/main.css"> -->
+  <link rel="stylesheet" href="./assets/styles/main.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </head>
 
@@ -350,7 +350,176 @@
                   <span class="text-[13px]">Subscribers</span>
                 </span>
               </div>
-              <canvas id="myChart" class="max-w-[680px] max-h-[150px] mr-0"></canvas>
+              <canvas id="myChart" class="max-w-[730px] max-h-[150px] mr-0"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pt-7">
+        <div class="handle-container">
+          <div class="flex justify-between gap-x-7">
+            <div class="max-w-[1035px] w-full bg-white border-[1px] border-[#DBDFEA] rounded-[4px]">
+              <div class="flex justify-between items-center p-6">
+                <div class="flex items-center">
+                  <h3 class="mr-3 font-bold tracking-[-0.168px]">Transaction</h3>
+                  <button
+                    class="font-medium text-[13px] leading-[100%] tracking-[-0.16px] capitalize text-[#6576FF]">See
+                    history</button>
+                </div>
+                <ul class="flex items-center gap-x-5 text-[14px]">
+                  <li>
+                    <button class="text-[#8091A7]">Paid</button>
+                  </li>
+                  <li>
+                    <button class="text-[#8091A7]">Pending</button>
+                  </li>
+                  <li>
+                    <button class="text-[#8091A7]">All</button>
+                  </li>
+                </ul>
+              </div>
+
+              <table class="w-full">
+                <tr class="text-[12.6px] leading-[21px] text-[#8091A7] border-[1px] border-[#DBDFEA]">
+                  <th class="py-2 px-6 text-left capitalize">Order no.</th>
+                  <th class="py-2 px-6 text-left capitalize">Customer</th>
+                  <th class="py-2 px-6 text-left capitalize">Date</th>
+                  <th class="py-2 px-6 text-left capitalize">Ref</th>
+                  <th class="py-2 px-6 text-left capitalize">Amount</th>
+                  <th class="py-2 px-6 text-left capitalize">Status</th>
+                  <th></th>
+                </tr>
+                <tr class="font-medium leading-[165%] border-[1px] border-[#DBDFEA]">
+                  <td class="py-[16px] px-6 text-[14px] text-[#6576FF]">#95954</td>
+                  <td class="flex items-center gap-x-3 py-[16px] px-6 text-xs text-[#364A63]">
+                    <span
+                      class="py-[8.5px] px-[11px] font-medium text-[14px] leading-[165%] uppercase text-white bg-[#6576FF] rounded-full">Ab</span>
+                    Abu Bin Ishtiyak
+                  </td>
+                  <td class="py-[16px] px-6 text-xs text-[#8091A7]">02/11/2020</td>
+                  <td class="py-[16px] px-6 text-xs text-[#6576FF]">SUB-2309232</td>
+                  <td class="py-[16px] px-6 text-xs text-[#364A63]">4,596.75 USD</td>
+                  <td class="transaction-status flex items-center py-[16px] px-6 text-xs">Paid</td>
+                  <td class="py-6 px-4 cursor-pointer">
+                    <button class="tabel-data-btn"> </button>
+                  </td>
+                </tr>
+                <tr class="font-medium leading-[165%] border-[1px] border-[#DBDFEA]">
+                  <td class="py-[16px] px-6 text-[14px] text-[#6576FF]">#95850</td>
+                  <td class="flex items-center gap-x-3 py-[16px] px-6 text-xs text-[#364A63] leading-[165%]">
+                    <span
+                      class="py-[8.5px] px-[11px] font-medium text-[14px] leading-[165%] uppercase text-white bg-[#1676FB] rounded-full">De</span>
+                    Desiree Edwards
+                  </td>
+                  <td class="py-[16px] px-6 text-xs text-[#8091A7]">02/02/2020</td>
+                  <td class="py-[16px] px-6 text-xs text-[#6576FF]">SUB-2309154</td>
+                  <td class="py-[16px] px-6 text-xs text-[#364A63]">196.75 USD</td>
+                  <td class="transaction-status flex items-center py-[16px] px-6 text-xs">Canceled</td>
+                  <td class="py-6 px-4 cursor-pointer">
+                    <button class="tabel-data-btn"> </button>
+                  </td>
+                </tr>
+                <tr class="font-medium leading-[165%] border-[1px] border-[#DBDFEA]">
+                  <td class="py-[16px] px-6 text-[14px] text-[#6576FF]">#95812</td>
+                  <td class="flex items-center gap-x-3 py-[16px] px-6 text-xs text-[#364A63]">
+                    <img class="rounded-full" src="./assets/images/blanca-schultz.png" alt="Blanca Schultz" width="40"
+                      height="40">
+                    Blanca Schultz
+                  </td>
+                  <td class="py-[16px] px-6 text-xs text-[#8091A7]">02/01/2020</td>
+                  <td class="py-[16px] px-6 text-xs text-[#6576FF]">SUB-2309143</td>
+                  <td class="py-[16px] px-6 text-xs text-[#364A63]">199.99 USD</td>
+                  <td class="transaction-status flex items-center py-[16px] px-6 text-xs">Paid</td>
+                  <td class="py-6 px-4 cursor-pointer">
+                    <button class="tabel-data-btn"> </button>
+                  </td>
+                </tr>
+                <tr class="font-medium leading-[165%] border-[1px] border-[#DBDFEA]">
+                  <td class="py-[16px] px-6 text-[14px] text-[#6576FF]">#95256</td>
+                  <td class="flex items-center gap-x-3 py-[16px] px-6 text-xs text-[#364A63]">
+                    <span
+                      class="py-[8.5px] px-[11px] font-medium text-[14px] leading-[165%] uppercase text-white bg-[#1676FB] rounded-full">Nl</span>
+                    Naomi Lawrence
+                  </td>
+                  <td class="py-[16px] px-6 text-xs text-[#8091A7]">01/29/2020</td>
+                  <td class="py-[16px] px-6 text-xs text-[#6576FF]">SUB-2309864</td>
+                  <td class="py-[16px] px-6 text-xs text-[#364A63]">1,099.99 USD</td>
+                  <td class="transaction-status flex items-center py-[16px] px-6 text-xs">Paid</td>
+                  <td class="py-6 px-4 cursor-pointer">
+                    <button class="tabel-data-btn"> </button>
+                  </td>
+                </tr>
+                <tr class="font-medium leading-[165%] border-[1px] border-[#DBDFEA]">
+                  <td class="py-[16px] px-6 text-[14px] text-[#6576FF]">#95135</td>
+                  <td class="flex items-center gap-x-3 py-[16px] px-6 text-xs text-[#364A63]">
+                    <span
+                      class="py-[8.5px] px-[11px] font-medium text-[14px] leading-[165%] uppercase text-white bg-[#1676FB] rounded-full">Ch</span>
+                    Cassandra Hogan
+                  </td>
+                  <td class="py-[16px] px-6 text-xs text-[#8091A7]">02/29/2020</td>
+                  <td class="py-[16px] px-6 text-xs text-[#6576FF]">SUB-2309564</td>
+                  <td class="py-[16px] px-6 text-xs text-[#364A63]">2,596.00 USD</td>
+                  <td class="transaction-status flex items-center py-[16px] px-6 text-xs">Paid</td>
+                  <td class="py-6 px-4 cursor-pointer">
+                    <button class="tabel-data-btn"> </button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="max-w-[503px] w-full bg-white border-[1px] border-[#DBDFEA] rounded-[4px]">
+              <div class="flex justify-between items-center p-6">
+                <h3 class="font-bold leading-[110%] tracking-[-0.168px] capitalize">Recent activities</h3>
+                <ul class="flex items-center gap-x-5 text-[14px] leading-[100%] text-[#8091A7]">
+                  <li>
+                    <button>Cancel</button>
+                  </li>
+                  <li>
+                    <button>All</button>
+                  </li>
+                </ul>
+              </div>
+              <ul>
+                <li class="flex items-center gap-x-3 py-[16px] px-6 border-t-[1px] border-[#DBDFEA]">
+                  <img src="./assets/images/keith-jensen.png" alt="Keith Jensen" width="40" height="40">
+                  <div>
+                    <p class="text-[14px] leading-[23px] text-[#526484]">Keith Jensen requested to Withdrawal.</p>
+                    <span class="text-xs leading-[19.8px] text-[#8091A7]">2 hours ago</span>
+                  </div>
+                </li>
+                <li class="flex items-center gap-x-3 py-[16px] px-6 border-t-[1px] border-[#DBDFEA]">
+                  <span
+                    class="pt-[11px] px-[11px] pb-3 font-semibold text-[13px] leading-[17px] uppercase text-[#FFFFFF] bg-[#F4BD0E] rounded-full">Hs</span>
+                  <div>
+                    <p class="text-[14px] leading-[23px] text-[#526484]">Harry Simpson placed a Order.</p>
+                    <span class="text-xs leading-[19.8px] text-[#8091A7]">1 hours ago</span>
+                  </div>
+                </li>
+                <li class="flex items-center gap-x-3 py-[16px] px-6 border-t-[1px] border-[#DBDFEA]">
+                  <span
+                    class="pt-3 px-[10px] pb-[11px] font-semibold text-[13px] leading-[16.6px] uppercase text-[#FFFFFF] bg-[#1676FB] rounded-full">Sm</span>
+                  <div>
+                    <p class="text-[14px] leading-[23px] text-[#526484]">Stephanie Marshall got a huge bonus.</p>
+                    <span class="text-xs leading-[19.8px] text-[#8091A7]">1 hours ago</span>
+                  </div>
+                </li>
+                <li class="flex items-center gap-x-3 py-[16px] px-6 border-t-[1px] border-[#DBDFEA]">
+                  <img src="./assets/images/timothy-moreno.png" alt="Timothy Moreno" width="40" height="40">
+                  <div>
+                    <p class="text-[14px] leading-[23px] text-[#526484]">Timothy Moreno placed a Order.</p>
+                    <span class="text-xs leading-[19.8px] text-[#8091A7]">2 hours ago</span>
+                  </div>
+                </li>
+                <li class="flex items-center gap-x-3 py-[16px] px-6 border-t-[1px] border-[#DBDFEA]">
+                  <span
+                    class="pt-[11px] pr-[10px] pb-3 pl-3 font-semibold text-[13px] leading-[16.6px] uppercase text-[#FFFFFF] bg-[#FF63A5] rounded-full">Nc</span>
+                  <div>
+                    <p class="text-[14px] leading-[23px] text-[#526484]">Nicholas Carr deposited funds.</p>
+                    <span class="text-xs leading-[19.8px] text-[#8091A7]">4 hours ago</span>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

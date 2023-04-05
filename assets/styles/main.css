@@ -1,11 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
-/* ! Normalize */
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -271,6 +263,7 @@ ul, ol {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: 'Nunito', 'Arial', sans-serif;
+  color: #364A63;
 }
 p {
   margin: 0;
@@ -392,4 +385,29 @@ p {
 }
 .revenueChart .modebar {
   display: none;
+}
+.transaction-paid::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 7px;
+  background-color: #1EE0AC;
+  border-radius: 50%;
+}
+.transaction-canceled::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 7px;
+  background-color: #E85347;
+  border-radius: 50%;
+}
+.tabel-data-btn {
+  width: 17px;
+  height: 4px;
+  background-image: url("../images/transactions-btn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
