@@ -411,3 +411,64 @@ p {
   background-repeat: no-repeat;
   background-position: center;
 }
+.new-users-menu-btn {
+  background-image: url("../images/new-users-btn.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.support-request-pending::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background-color: #F4BD0E;
+}
+.support-request-open::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background-color: #09C2DE;
+}
+.support-request-solved::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background-color: #1EE0AC;
+}
+.notifications-item .notifications-date::before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.notifications-item:first-child .notifications-date::before {
+  border: 2px solid #6576FF;
+}
+.notifications-item:nth-child(2) .notifications-date::before {
+  background-color: #6576FF;
+}
+.notifications-item:nth-child(3) .notifications-date::before {
+  background-color: #FF63A5;
+}
+.notifications-date::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  margin-left: 23px;
+  background-image: url("../images/clock.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}

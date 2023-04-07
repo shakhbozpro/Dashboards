@@ -8,6 +8,7 @@ const amlMenuBtn = document.querySelector(".aml-menu-btn");
 const amlArrow = document.querySelector(".aml-arrow");
 const amlMenuList = document.querySelector(".aml-list");
 const transactionStatus = document.querySelectorAll(".transaction-status");
+const supportRequestText = document.querySelectorAll(".support-request-text");
 
 projectsMenuBtn.addEventListener('click', () => {
   projectsArrow.classList.toggle("rotate-90");
@@ -130,7 +131,7 @@ let myChart = new Chart(ctxx, {
     datasets: [
       {
         label: "Vertical Line Chart",
-        data: [5, 7, 10, 5, 15, 22, 7, 5, 15, 7, 7, 5, 8, 25, 7, 5, 15, 19, 7, 7, 20, 17, 21, 13, 25],
+        data: [10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10],
         backgroundColor: "#E0E4FF",
         borderColor: "#6576FF",
         borderWidth: 2,
@@ -166,5 +167,18 @@ transactionStatus.forEach(item => {
   }
   if (item.textContent === "Canceled") {
     item.classList.add("text-[#E85347]", "transaction-canceled");
+  }
+})
+
+// ! Support request styling
+supportRequestText.forEach(item => {
+  if (item.textContent === "Pending") {
+    item.classList.add("text-[#F4BD0E]", "support-request-pending");
+  }
+  if (item.textContent === "Open") {
+    item.classList.add("text-[#09C2DE]", "support-request-open");
+  }
+  if (item.textContent === "Solved") {
+    item.classList.add("text-[#1EE0AC]", "support-request-solved");
   }
 })
