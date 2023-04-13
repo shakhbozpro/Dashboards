@@ -501,3 +501,19 @@ p {
   background-size: contain;
   background-position: center;
 }
+
+/* ! Footer styles */
+.footer-lang-sub {
+  appearance: none; 
+}
+.footer-lang-sub::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 2px;
+  background-image: url("../images/arrow-up.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
