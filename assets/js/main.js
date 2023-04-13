@@ -1,30 +1,35 @@
-const projectsMenuBtn = document.querySelector(".projects-menu-btn");
-const projectsArrow = document.querySelector(".projects-arrow");
-const projectsList = document.querySelector(".projects-list");
-const userManageMenuBtn = document.querySelector(".user-manage-menu-btn");
-const userArrow = document.querySelector(".user-arrow");
-const userMenuList = document.querySelector(".user-manage-list");
-const amlMenuBtn = document.querySelector(".aml-menu-btn");
-const amlArrow = document.querySelector(".aml-arrow");
-const amlMenuList = document.querySelector(".aml-list");
+const sidebar = document.querySelector(".sidebar");
+const sidebarClosed = document.querySelector(".close");
+const sidebarBtn = document.querySelector(".sidebar-btn");
 const transactionStatus = document.querySelectorAll(".transaction-status");
 const supportRequestText = document.querySelectorAll(".support-request-text");
+const sidebarDropdownItems = document.querySelectorAll(".sidebar-item");
 
-projectsMenuBtn.addEventListener('click', () => {
-  projectsArrow.classList.toggle("rotate-90");
-  projectsList.classList.toggle("show")
+
+const savedElements = JSON.parse(localStorage.getItem("object")) || [];
+// ! Sidebar menu button onclick
+sidebarBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("close");
+  localStorage.setItem("object", JSON.stringify(savedElements));
 });
 
-userManageMenuBtn.addEventListener('click', () => {
-  userArrow.classList.toggle("rotate-90");
-  userMenuList.classList.toggle("show")
-});
+// ! Dropdown function
+sidebarDropdownItems.forEach(item => {
+  const list = item.querySelector("ul");
 
-amlMenuBtn.addEventListener('click', () => {
-  amlArrow.classList.toggle("rotate-90");
-  amlMenuList.classList.toggle("show")
+  item.addEventListener("click", () => {
+    list.classList.toggle("hidden");
+  })
 });
+// for rotating clicked item's arrow
+for (let i = 0; i < sidebarDropdownItems.length; i++) {
+  sidebarDropdownItems[i].addEventListener('click', () => {
+    const images = sidebarDropdownItems[i].querySelectorAll('img');
+    images[1].classList.toggle('rotate-90');
+  });
+};
 
+localStorage.setItem("object", JSON.stringify(sidebarClosed));
 
 // ! Data for the bar chart1
 const data = [23, 20, 28, 18, 21, 31, 29, 26, 30, 24, 28, 43];
@@ -127,11 +132,11 @@ let ctxx = document.getElementById("myChart").getContext("2d");
 let myChart = new Chart(ctxx, {
   type: "line",
   data: {
-    labels: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"],
+    labels: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15"],
     datasets: [
       {
-        label: "Vertical Line Chart",
-        data: [10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10, 15, 10],
+        label: "Sales Overview",
+        data: [5, 15, 4, 20, 2, 15, 5, 15, 4, 20, 2, 15, 5, 15, 4,],
         backgroundColor: "#E0E4FF",
         borderColor: "#6576FF",
         borderWidth: 2,
@@ -156,6 +161,9 @@ let myChart = new Chart(ctxx, {
       enabled: true,
       mode: 'label',
       intersect: false,
+      titleFontSize: 16,
+      bodyFontSize: 18,
+      titleSpacing: -5,
     },
   },
 });

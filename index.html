@@ -9,34 +9,35 @@
   <!-- Tailwind file -->
   <link rel="stylesheet" href="./dist/output.css">
   <!-- CSS files -->
-  <!-- <link rel="stylesheet" href="./assets/styles/main.css"> -->
-  <link rel="stylesheet" href="./assets/styles/main.min.css">
+  <link rel="stylesheet" href="./assets/styles/main.css">
+  <!-- <link rel="stylesheet" href="./assets/styles/main.min.css"> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </head>
 
 <body class="flex items-start">
   <!-- ? Sidebar start -->
-  <div class="sidebar max-w-[290px] w-full pb-[29px] bg-slate-900">
-    <div class="flex items-center gap-x-6 py-[14px] px-6">
-      <button>
-        <img src="./assets/images/burger-menu.svg" alt="Menu button" width="22" height="16">
+  <div class="sidebar fixed top-0 left-0 w-full pb-[29px] bg-slate-900 overflow-scroll">
+    <div class="sidebar-top flex items-center gap-x-6 py-[14px] px-6">
+      <button class="sidebar-btn">
+        <img src="./assets/images/burger-menu.svg" alt="Menu button" width="24" height="24">
       </button>
-      <a href="index.html">
+      <a class="site-logo" href="index.html">
         <img src="./assets/images/site-logo.png" alt="Site logo" width="118" height="36">
       </a>
     </div>
 
-    <ul class="sidebar-list font-bold py-4 px-6">
+    <ul class="sidebar-list font-bold py-4 text-[#8091a7] text-[15px] leading-5 tracking-[0.16px] capitalize">
       <li class="mb-10">
-        <h3 class="sidebar-heading mb-2 text-[11px] leading-[120%] tracking-[2.2px] uppercase">Use-case preview</h3>
+        <h3 class="sidebar-heading mb-2 px-6 text-[11px] leading-[120%] tracking-[2.2px] uppercase">Use-case preview
+        </h3>
         <ul>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/user-manage.svg" alt="User manage" width="22" height="21">
+          <li class="sidebar-item flex items-center gap-x-3 py-3 cursor-pointer">
+            <img src="./assets/images/user-manage.svg" alt="User manage" width="24" height="24">
             <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">User manage</a>
             <span class="sidebar-item-badge ml-auto px-2 text-[11px] leading-5 tracking-[0.16px] uppercase">Hot</span>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/hotel-managment.svg" alt="Hotel management" width="22" height="20">
+          <li class="sidebar-item flex items-center gap-x-3 py-3 cursor-pointer">
+            <img src="./assets/images/hotel-managment.svg" alt="Hotel management" width="24" height="24">
             <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Hotel
               management</a>
           </li>
@@ -44,25 +45,25 @@
       </li>
 
       <li class="mb-10">
-        <h3 class="sidebar-heading mb-2 text-[11px] leading-[120%] tracking-[2.2px] uppercase">Dashboards</h3>
+        <h3 class="sidebar-heading mb-2 px-6 text-[11px] leading-[120%] tracking-[2.2px] uppercase">Dashboards</h3>
         <ul>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/default-dashboard.svg" alt="Default dashboard" width="18" height="20">
+          <li class="sidebar-item flex items-center gap-x-3 py-3 cursor-pointer">
+            <img src="./assets/images/default-dashboard.svg" alt="Default dashboard" width="24" height="24">
             <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Default
               dashboard</a>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/crypto-dashboard.svg" alt="Crypto dashboard" width="16" height="20">
+          <li class="sidebar-item flex items-center gap-x-3 py-3 cursor-pointer">
+            <img src="./assets/images/crypto-dashboard.svg" alt="Crypto dashboard" width="24" height="24">
             <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Crypto
               dashboard</a>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/analytics-dashboard.svg" alt="Analytics dashboard" width="22" height="22">
+          <li class="sidebar-item flex items-center gap-x-3 py-3 cursor-pointer">
+            <img src="./assets/images/analytics-dashboard.svg" alt="Analytics dashboard" width="24" height="24">
             <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Analytics
               dashboard</a>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/invest-dashboard.svg" alt="Invest dashboard" width="22" height="20">
+          <li class="sidebar-item flex items-center gap-x-3 py-3 cursor-pointer">
+            <img src="./assets/images/invest-dashboard.svg" alt="Invest dashboard" width="24" height="24">
             <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Invest
               dashboard</a>
           </li>
@@ -70,135 +71,365 @@
       </li>
 
       <li class="mb-10">
-        <h3 class="sidebar-heading mb-2 text-[11px] leading-[120%] tracking-[2.2px] uppercase">Pre-built pages</h3>
+        <h3 class="sidebar-heading mb-2 px-6 text-[11px] leading-[120%] tracking-[2.2px] uppercase">Pre-built pages</h3>
         <ul>
-          <li class="py-3">
-            <div class="flex items-center gap-x-3">
-              <img src="./assets/images/projects.svg" alt="Projects" width="22" height="20">
-              <button
-                class="sidebar-link projects-menu-btn flex items-center justify-between w-full text-[15px] leading-5 tracking-[0.16px] capitalize">Projects
-                <img class="projects-arrow transition duration-50 ease-in-out"
-                  src="./assets/images/navbar-arrow-right.svg" alt="Projects' right arrow" width="6" height="11">
-              </button>
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/projects.svg" alt="Projects" width="24" height="24">
+                <span class="sidebar-link">Projects</span>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Projects' right arrow" width="6" height="11">
             </div>
-            <ul class="sidebar-menus-list projects-list w-[90%] ml-auto static hidden">
+            <ul
+              class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize text-[#8091a7] hidden">
               <li>
-                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">Project 01</a>
+                <a class="inline-inline-block w-full p-3 pl-0" href="#">Project 01</a>
               </li>
               <li>
-                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">Project 02</a>
+                <a class="inline-inline-block w-full p-3 pl-0" href="#">Project 02</a>
               </li>
               <li>
-                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">Project 03</a>
+                <a class="inline-inline-block w-full p-3 pl-0" href="#">Project 03</a>
               </li>
             </ul>
           </li>
-          <li class="py-3">
-            <div class="flex items-center gap-x-3">
-              <img src="./assets/images/projects.svg" alt="User manage" width="22" height="22">
-              <button
-                class="sidebar-link user-manage-menu-btn flex items-center justify-between w-full text-[15px] leading-5 tracking-[0.16px] capitalize">User
-                manage
-                <img class="user-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
-                  alt="User's right arrow" width="6" height="11">
-              </button>
+
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/projects.svg" alt="User manage" width="24" height="24">
+                <span class="sidebar-link">User manage</span>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="User manage's right arrow" width="6" height="11">
             </div>
-            <ul class="sidebar-menus-list user-manage-list w-[90%] ml-auto static hidden">
+            <ul
+              class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize text-[#8091a7] hidden">
               <li>
-                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">User 01</a>
+                <a class="inline-inline-block w-full p-3 pl-0" href="#">User 01</a>
               </li>
               <li>
-                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">User 02</a>
+                <a class="inline-inline-block w-full p-3 pl-0" href="#">User 02</a>
               </li>
               <li>
-                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">User 03</a>
+                <a class="inline-inline-block w-full p-3 pl-0" href="#">User 03</a>
               </li>
             </ul>
           </li>
-          <li class="py-3">
-            <div class="flex items-center gap-x-3">
-              <img src="./assets/images/AML-KYCs.svg" alt="AML / KYCs" width="22" height="22">
-              <button
-                class="sidebar-link aml-menu-btn flex justify-between items-center w-full text-[15px] leading-5 tracking-[0.16px] capitalize">AML
-                /
-                KYCs
-                <img class="aml-arrow" src="./assets/images/navbar-arrow-right.svg" alt="AML / KYCs right arrow"
-                  width="6" height="11">
-              </button>
+
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/AML-KYCs.svg" alt="AML / KYCs" width="24" height="24">
+                <span class="sidebar-link">AML / KYCs</span>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="AML / KYCs' right arrow" width="6" height="11">
             </div>
-            <ul class="sidebar-menus-list aml-list w-[90%] ml-auto static hidden">
+            <ul
+              class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize text-[#8091a7] hidden">
               <li>
-                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">Aml / KYCs 01</a>
+                <a class="inline-block w-full p-3 pl-0" href="#">AML / KYCs 01</a>
               </li>
               <li>
-                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">Aml / KYCs 02</a>
+                <a class="inline-block w-full p-3 pl-0" href="#">AML / KYCs 02</a>
               </li>
               <li>
-                <a class="block w-full p-3 hover:bg-[#4B5563]" href="#">Aml / KYCs 03</a>
+                <a class="inline-block w-full p-3 pl-0" href="#">AML / KYCs 03</a>
               </li>
             </ul>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/transactions.svg" alt="Transactions" width="22" height="20">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Transactions</a>
+
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/transactions.svg" alt="Transactions" width="24" height="24">
+                <span class="sidebar-link">Transactions</span>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Transactions' right arrow" width="6" height="11">
+            </div>
+            <ul
+              class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize text-[#8091a7] hidden">
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Transaction 01</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Transaction 02</a>
+              </li>
+            </ul>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/applications.svg" alt="Applications" width="22" height="20">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Applications</a>
+
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/applications.svg" alt="Applications" width="24" height="24">
+                <span class="sidebar-link">Applications</span>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Applications right arrow" width="6" height="11">
+            </div>
+            <ul
+              class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize text-[#8091a7] hidden">
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Aplications 01</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Aplications 02</a>
+              </li>
+            </ul>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/invoice.svg" alt="Invoice" width="22" height="22">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Invoice</a>
+
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/invoice.svg" alt="Invoice" width="24" height="24">
+                <span class="sidebar-link">Invoice</span>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Invoice right arrow" width="6" height="11">
+            </div>
+            <ul
+              class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize text-[#8091a7] hidden">
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Invoice 01</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Invoice 02</a>
+              </li>
+            </ul>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/products.svg" alt="Products" width="18" height="19">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Products</a>
+
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/products.svg" alt="Products" width="24" height="24">
+                <span class="sidebar-link">Products</span>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Products right arrow" width="6" height="11">
+            </div>
+            <ul
+              class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize text-[#8091a7] hidden">
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Product 01</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Product 02</a>
+              </li>
+            </ul>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/pricing-table.svg" alt="Pricing table" width="22" height="20">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Pricing table</a>
+
+          <li class="sidebar-item flex items-center gap-x-3 py-3 cursor-pointer">
+            <img src="./assets/images/pricing-table.svg" alt="Pricing table" width="24" height="24">
+            <a class="sidebar-link" href="#">Pricing table</a>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/image-gallery.svg" alt="Image gallery" width="22" height="20">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Image gallery</a>
+
+          <li class="sidebar-item flex items-center gap-x-3 py-3 cursor-pointer">
+            <img src="./assets/images/image-gallery.svg" alt="Image gallery" width="24" height="24">
+            <a class="sidebar-link" href="#">Image gallery</a>
           </li>
         </ul>
       </li>
 
-      <li>
-        <h3 class="sidebar-heading mb-2 text-[11px] leading-[120%] tracking-[2.2px] uppercase">Components</h3>
+      <li class="mb-10">
+        <h3 class="sidebar-heading mb-2 px-6 text-[11px] leading-[120%] tracking-[2.2px] uppercase">Misc pages</h3>
         <ul>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/Ui-elements.svg" alt="Ui elements" width="22" height="20">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Ui elements</a>
+          <li class="sidebar-item flex items-center gap-x-3 py-3 cursor-pointer">
+            <img src="./assets/images/auth-pages.svg" alt="Auth pages" width="24" height="24">
+            <a class="sidebar-link" href="#">Auth page</a>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/crafted-icons.svg" alt="Crafted icons" width="18" height="19">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Crafted icons</a>
+
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/error-pages.svg" alt="Error pages" width="24" height="24">
+                <span class="sidebar-link">Error pages</span>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Error page's right arrow" width="6" height="11">
+            </div>
+            <ul
+              class="sub-menu mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize text-[#8091a7] hidden">
+              <li>
+                <a class="inline-block w-full p-3 pl-2" href="#">Error 01</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-2" href="#">Error 02</a>
+              </li>
+            </ul>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/icon-libraries.svg" alt="Icon libraries" width="18" height="19">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Icon Libraries</a>
+
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/other-pages.svg" alt="Other pages" width="24" height="24">
+                <span class="sidebar-link">Other pages</span>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Other pages' right arrow" width="6" height="11">
+            </div>
+            <ul
+              class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize text-[#8091a7] hidden">
+              <li>
+                <a class="inline-block w-full p-3 pl-1" href="#">Other 01</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-1" href="#">Other 02</a>
+              </li>
+            </ul>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/tables.svg" alt="Tables" width="18" height="17">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Tables</a>
+        </ul>
+      </li>
+
+      <li class="mb-10">
+        <h3 class="sidebar-heading mb-2 px-6 text-[11px] leading-[120%] tracking-[2.2px] uppercase">Components</h3>
+        <ul>
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div
+                class="sidebar-text flex items-center gap-x-3 text-[15px] leading-5 tracking-[0.16px] capitalize text-[#8091a7]">
+                <img src="./assets/images/Ui-elements.svg" alt="Ui elements" width="24" height="24">
+                <span class="sidebar-link">Ui elements</span>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Ui elements' right arrow" width="6" height="11">
+            </div>
+            <ul
+              class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize text-[#8091a7] hidden">
+              <li>
+                <a class="inline-block w-full p-3 pl-1" href="#">Ui element 01</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-1" href="#">Ui element 02</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-1" href="#">Ui element 03</a>
+              </li>
+            </ul>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/forms.svg" alt="Forms" width="18" height="19">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Forms</a>
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/crafted-icons.svg" alt="Crafted icons" width="24" height="24">
+                <span class="sidebar-link">Crafted icons</span>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Crafted icons' right arrow" width="6" height="11">
+            </div>
+            <ul class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize hidden">
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Crafted icon 01</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Crafted icon 02</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Crafted icon 03</a>
+              </li>
+            </ul>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/charts.svg" alt="Charts" width="22" height="20">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Charts</a>
+          <li class="sidebar-item flex items-center gap-x-3 py-3 cursor-pointer">
+            <img src="./assets/images/icon-libraries.svg" alt="Icon libraries" width="24" height="24">
+            <a class="sidebar-link text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Icon libraries</a>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/miscellaneous.svg" alt="Miscellaneous" width="22" height="20">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Miscellaneous</a>
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/tables.svg" alt="Tables" width="24" height="24">
+                <span class="sidebar-link">Tables</span>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Tables' right arrow" width="6" height="11">
+            </div>
+            <ul class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize hidden">
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Table 01</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Table 02</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Table 03</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Table 04</a>
+              </li>
+            </ul>
           </li>
-          <li class="flex items-center gap-x-3 py-3">
-            <img src="./assets/images/email-template.svg" alt="Email template" width="18" height="20">
-            <a class="sidebar-link block text-[15px] leading-5 tracking-[0.16px] capitalize" href="#">Email template</a>
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/forms.svg" alt="Forms" width="24" height="24">
+                <a class="sidebar-link" href="#">Forms</a>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Forms' right arrow" width="6" height="11">
+            </div>
+            <ul class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize hidden">
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Form 01</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Form 02</a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/charts.svg" alt="Charts" width="24" height="24">
+                <a class="sidebar-link" href="#">Charts</a>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Charts' right arrow" width="6" height="11">
+            </div>
+            <ul class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize hidden">
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Chart 01</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Chart 02</a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/miscellaneous.svg" alt="Miscellaneous" width="24" height="24">
+                <a class="sidebar-link" href="#">Miscellaneous</a>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Miscellaneous' right arrow" width="6" height="11">
+            </div>
+            <ul class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize hidden">
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Miscellaneous 01</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Miscellaneous 02</a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar-item py-3 cursor-pointer">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-x-3">
+                <img src="./assets/images/email-template.svg" alt="Email template" width="24" height="24">
+                <a class="sidebar-link" href="#">Email template</a>
+              </div>
+              <img class="sub-arrow transition duration-50 ease-in-out" src="./assets/images/navbar-arrow-right.svg"
+                alt="Email template's right arrow" width="6" height="11">
+            </div>
+            <ul class="sub-menu w-[88%] mt-[14px] ml-auto text-[15px] leading-5 tracking-[0.16px] capitalize hidden">
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Template 01</a>
+              </li>
+              <li>
+                <a class="inline-block w-full p-3 pl-0" href="#">Template 02</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </li>
@@ -209,7 +440,7 @@
 
   <!-- ! Main content start -->
 
-  <div class="w-full">
+  <div class="main-content relative">
     <!-- ? Header start -->
     <header class="header w-full py-4 bg-white">
       <div class="handle-container">
@@ -350,7 +581,7 @@
                   <span class="text-[13px]">Subscribers</span>
                 </span>
               </div>
-              <canvas id="myChart" class="max-w-[730px] max-h-[150px] mr-0"></canvas>
+              <canvas id="myChart" class="max-w-[730px] max-h-[170px] mr-0"></canvas>
             </div>
           </div>
         </div>
